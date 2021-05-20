@@ -219,13 +219,13 @@ public class EndpointResourceTest {
 //                .body("message", equalTo("Not authenticated - do login"));
 //    }
 
-    @Test
-    public void getAllCourseTest() {
-        given()
-                .contentType("application/json")
-                .when()
-                .get("/course/getall").then()
-                .statusCode(200);
-
-    }
+//    @Test
+//    public void getAllCourseTest() {
+//        given()
+//                .contentType("application/json")
+//                .when()
+//                .get("/course/getall").then()
+//                .statusCode(200);
+//
+//    }
 }
