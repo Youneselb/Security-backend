@@ -9,10 +9,6 @@ import entities.User;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Yones
- */
 public class UsersDTO {
            
     List<UserDTO> all = new ArrayList();

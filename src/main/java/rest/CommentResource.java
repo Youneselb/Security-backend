@@ -47,16 +47,17 @@ public class CommentResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes({MediaType.APPLICATION_JSON})
     @Path("newcomment")
-    public String addComment(String addComment) throws AuthenticationException {
-        Comment commentToAdd = GSON.fromJson(addComment, Comment.class);
-        CommentFACADE.addNewComment(commentToAdd);
-        return "{\"msg\": \"Comment added  \"}";
+    public String addComment(String addcomment) throws AuthenticationException {
+        Comment commentToAdd = GSON.fromJson(addcomment, Comment.class);
+        Comment addedComment = CommentFACADE.addNewComment(commentToAdd);
+        return "{\"msg\": \"Comment added\"}";
     }
     
     @PUT 
     @Path("editcomment/{id}")
     @Produces({MediaType.APPLICATION_JSON})
     @Consumes({MediaType.APPLICATION_JSON})
+    @RolesAllowed("admin")
     public String editComment(@PathParam("id") int id, String comment) throws NotFoundException {
         CommentDTO cDTO = GSON.fromJson(comment, CommentDTO.class);
         cDTO.setId((int) id);

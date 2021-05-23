@@ -8,7 +8,6 @@ public class CommentsDTO {
     
     List<CommentDTO> all = new ArrayList();
 
-    
     public CommentsDTO(List<Comment> commentEntities) {
         commentEntities.forEach((c) -> {
             all.add(new CommentDTO(c));
@@ -23,6 +22,5 @@ public class CommentsDTO {
         this.all = all;
     }
     
-
-    
 }
+

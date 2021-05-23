@@ -7,6 +7,9 @@ public class CommentDTO {
     private String comment;
     private int id;
 
+    public CommentDTO() {
+    }
+    
     public CommentDTO(Comment comment) {
         this.comment = comment.getComment();
         this.id = comment.getId();

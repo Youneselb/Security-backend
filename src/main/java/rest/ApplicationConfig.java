@@ -26,10 +26,11 @@
             resources.add(org.glassfish.jersey.server.wadl.internal.WadlResource.class);
             resources.add(rest.CommentResource.class);
        //     resources.add(rest.RenameMeResource.class);
-       resources.add(security.JWTAuthenticationFilter.class);
-            resources.add(security.LoginEndpoint.class);
-         resources.add(security.RolesAllowedFilter.class);
-            resources.add(security.errorhandling.AuthenticationExceptionMapper.class);
+       resources.add(rest.LoginResource.class);
+            resources.add(security.JWTAuthenticationFilter.class);
+         resources.add(security.LoginEndpoint.class);
+            resources.add(security.RolesAllowedFilter.class);
+        resources.add(security.errorhandling.AuthenticationExceptionMapper.class);
         resources.add(security.errorhandling.NotAuthorizedExceptionMapper.class);
         }
         
